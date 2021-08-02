@@ -8,11 +8,11 @@ As you explore this information, you'll be able to do a few double clicks to bet
 
 <script src='https://d3js.org/d3.v5.min.js'></script>
 <style> circle {fill: lightblue; stroke: black;} </style>
+<style> rect {fill: none; stroke: black;} </style>
 <body onload='init()'>
 <svg width=700 height=700>
 </svg>
 <script>
-<style> circle, rect {fill: none; stroke: black;} </style>
         
 async function init() {
 
@@ -79,6 +79,7 @@ d3.select("svg").append("rect")
     .attr("width", 200)
     .attr("height", 60);
 }
+        
 </script>
 </body>
         
