@@ -52,8 +52,18 @@ d3.select("svg").append("text")
     .text("Average City MPG"); 
 
 d3.select("svg").append("text")
-    .attr("transform","translate(10,300) rotate(-90)")    
+    .attr("transform","translate(10,350) rotate(-90)")    
     .text("Average Highway MPG"); 
+        
+d3.select("svg").append("text")
+    .attr("x", 300)
+    .attr("y", 15)
+    .text("Fuel Efficiency by Car Make");
+        
+d3.select("svg").append("text")
+    .attr("x", 300)
+    .attr("y", 550)
+    .text("Note: the size of each bubble is representative of how many engine cylinders it has");
         
 }
 </script>
