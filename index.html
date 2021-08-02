@@ -9,13 +9,13 @@ As you explore this information, you'll be able to do a few double clicks to bet
 <script src='https://d3js.org/d3.v5.min.js'></script>
 <style> circle {fill: lightblue; stroke: black;} </style>
 <body onload='init()'>
-<svg width=400 height=400>
+<svg width=1000 height=1000>
 </svg>
 <script>
 async function init() {
 
-scaleL = d3.scaleLog().domain([10,150]).range([0,200]) 
-scaleY = d3.scaleLog().domain([10,150]).range([200,0]) 
+scaleL = d3.scaleLog().domain([10,150]).range([0,800]) 
+scaleY = d3.scaleLog().domain([10,150]).range([800,0]) 
 const data = await d3.csv(
         'https://flunky.github.io/cars2017.csv');
     d3.select("svg")
