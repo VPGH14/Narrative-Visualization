@@ -1,11 +1,14 @@
 <html>
 
-<h1>Hello! Welcome to an analysis of cars in 2017! edit</h1>
+<h1>Hello! Welcome to an analysis of cars in 2017!</h1>
         
 <p> In this analysis, we are going to look at different makes of cars in 2017 and 
 study how they stack up in terms of fule efficiency. We'll see a mix of gasoline and electric cars. We'll see cars with different numbers of engine cylinders.
 As you explore this information, you'll be able to do a few double clicks to better understand the data and analyze the information seen.</p>
 
+        
+<button type="button">Blue</button>        
+        
 <script src='https://d3js.org/d3.v5.min.js'></script>
 <style> circle {fill: lightblue; stroke: black;} </style>
 <style> rect {fill: none; stroke: black;} </style>
@@ -60,6 +63,7 @@ d3.select("svg").append("text")
 d3.select("svg").append("text")
     .attr("x", 300)
     .attr("y", 15)
+    .attr("font-weight",200)
     .text("Fuel Efficiency by Car Make");
         
 d3.select("svg").append("text")
