@@ -47,13 +47,14 @@ d3.select("svg").append("g")
    .call(d3.axisBottom(scaleL).tickFormat(d3.format("~s")).tickValues([10,20,50,100]));
   
 d3.select("svg").append("text")
-    .attr("x", 500)
-    .attr("y", 800)
+    .attr("x", 350)
+    .attr("y", 675)
     .text("Average City MPG"); 
 
 d3.select("svg").append("text")
-    .attr("x", 400)
-    .attr("y", 400)
+    .attr("transform","rotate(-90)")    
+    .attr("x", 25)
+    .attr("y", 350)
     .text("Average Highway MPG"); 
         
 }
