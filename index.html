@@ -1,6 +1,6 @@
 <html>
 
-<h1>Hello! Welcome to an analysis of cars in 2017! edit</h1>
+<h1>Hello! Welcome to an analysis of cars in 2017!</h1>
         
 <p> In this analysis, we are going to look at different makes of cars in 2017 and 
 study how they stack up in terms of fule efficiency. We'll see a mix of gasoline and electric cars. We'll see cars with different numbers of engine cylinders.
@@ -12,6 +12,18 @@ As you explore this information, you'll be able to do a few double clicks to bet
 <script src='https://d3js.org/d3.v5.min.js'></script>
 <style> circle {fill: lightblue; stroke: black;} </style>
 <style> rect {fill: none; stroke: black;} </style>
+<style> div.tooltip {	
+    position: absolute;			
+    text-align: center;			
+    width: 60px;					
+    height: 28px;					
+    padding: 2px;				
+    font: 12px sans-serif;		
+    background: lightsteelblue;	
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none;		
+</style>
 <body onload='init()'>
 <svg width=700 height=700>
 </svg>
@@ -40,10 +52,9 @@ const data = await d3.csv(
                                          scaleL(d["AverageHighwayMPG"]);})
          .attr("r", function(d,i) { return (2 + +d["EngineCylinders"]);});
          .on("mouseover",function(d,i){
-             tooltip.style("opacity",1)
+               div.html(d["Make"]);
                .style("left",(d3.event.pageX)+"px")
-               .style("top",(d3.event.pageY)+"px")
-               .html(d["Make"]);
+               .style("top",(d3.event.pageY)+"px");
 
 d3.select("svg").append("g")
    .attr("transform","translate(50,50)")
